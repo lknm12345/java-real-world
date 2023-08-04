@@ -19,4 +19,12 @@ public class ArticleService {
 
         return articleRepository.save(article);
     }
+
+    public Article getArticleBySlug (String slug) {
+        return articleRepository.findOneBySlug(slug).orElseThrow();
+    }
+
+    public Article deleteArticleBySlug (String slug) {
+        return articleRepository.findOneBySlug(slug).orElseThrow();
+    }
 }
